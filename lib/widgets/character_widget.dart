@@ -46,6 +46,7 @@ class CharacterWidget extends StatelessWidget {
   Widget _setMiniosnImage(double height) {
     return Align(
         alignment: Alignment(0, -0.55),
+        //Hero not working
         child: Hero(
           tag: "Image1",
           child: Material(
@@ -61,6 +62,7 @@ class CharacterWidget extends StatelessWidget {
   }
 
   // set name and content under image.
+  //todo : fix hero
   Widget _characterName() {
     return Padding(
       padding: EdgeInsets.only(left: 48, right: 16, bottom: 8),
