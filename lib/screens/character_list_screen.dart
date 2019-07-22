@@ -6,24 +6,22 @@ import '../model/characters_model.dart';
 class CharacterListScreen extends StatefulWidget {
   _CharacterListScreenState createState() => _CharacterListScreenState();
 
-  final Character character ;
+  final Character character;
 
   CharacterListScreen(this.character);
-
-
 }
 
 class _CharacterListScreenState extends State<CharacterListScreen> {
   //ViewPager
   PageController _pageController;
 
-  int currentPage = 0;
+  int _currentPage = 0;
 
   @override
   void initState() {
     super.initState();
     _pageController = PageController(
-        viewportFraction: 1.0, initialPage: currentPage, keepPage: false);
+        viewportFraction: 1.0, initialPage: _currentPage, keepPage: false);
   }
 
   @override
@@ -73,8 +71,12 @@ class _CharacterListScreenState extends State<CharacterListScreen> {
 
   List<Widget> _createCharacterWidget(int length) {
     List<Widget> characterWidgets = [];
-    for(var i = 0 ; i < length ;i++){
-      characterWidgets.add(CharacterWidget(character: characters[i],));
+    for (var i = 0; i < length; i++) {
+      characterWidgets.add(CharacterWidget(
+        character: characters[i],
+        pageController: _pageController,
+        currentPage: i,
+      ));
     }
     return characterWidgets;
   }

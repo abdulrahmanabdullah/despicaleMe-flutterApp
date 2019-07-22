@@ -4,26 +4,46 @@ import '../utlities/app_theme.dart';
 import '../screens/characters_details.dart';
 
 class CharacterWidget extends StatelessWidget {
+  final Character character;
 
-  final Character character ;
+  final PageController pageController;
 
-  CharacterWidget({this.character});
+  final int currentPage;
+
+  CharacterWidget({this.character, this.pageController, this.currentPage});
 
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height;
-    final screenWidth = MediaQuery.of(context).size.width;
     return InkWell(
       onTap: () {
         _moveToDetails(context);
       },
-      child: Stack(
-        children: [
-          _backgroundColorWidget(screenHeight, screenWidth),
-          _chacracterImage(screenHeight),
-          _characterName(),
-        ],
+      child: AnimatedBuilder(
+        animation: pageController,
+        builder: (context, builder) {
+          double value = 1;
+          if (pageController.position.haveDimensions) {
+            value = pageController.page - currentPage;
+            value = (1 - (value.abs() * 0.6)).clamp(0.0, 1.0);
+          }
+          return _stackPage(context,value);
+        },
       ),
+    );
+  }
+
+  // stack contain all widget in this layout
+  Widget _stackPage(context,double value) {
+    //Get media query of height
+    double height = screenHeightValue(context);
+    //Get media query of width
+    double width = screenWidthValue(context);
+    return Stack(
+      children: [
+        _backgroundColorWidget(height, width),
+        _chacracterImage(height,value),
+        _characterName(),
+      ],
     );
   }
 
@@ -48,7 +68,7 @@ class CharacterWidget extends StatelessWidget {
   }
 
   //Set miniosn image
-  Widget _chacracterImage(double height) {
+  Widget _chacracterImage(double height,double value) {
     return Align(
         alignment: Alignment(0, -0.55),
         //Hero not working
@@ -56,11 +76,9 @@ class CharacterWidget extends StatelessWidget {
           tag: "Image1",
           child: Material(
             color: Colors.transparent,
-            child: Container(
-              child: Image.asset(
-                character.imagePath,
-                height: height * 0.55,
-              ),
+            child: Image.asset(
+              character.imagePath,
+              height: height * 0.55 * value,
             ),
           ),
         ));
@@ -115,6 +133,15 @@ class CharacterWidget extends StatelessWidget {
             pageBuilder: (context, _, __) => CharactersDetails(
                   charater: character,
                 )));
+  }
+
+  // get height and width of screen
+  double screenHeightValue(context) {
+    return MediaQuery.of(context).size.height;
+  }
+
+  double screenWidthValue(context) {
+    return MediaQuery.of(context).size.width;
   }
 }
 
