@@ -4,6 +4,11 @@ import '../utlities/app_theme.dart';
 import '../screens/characters_details.dart';
 
 class CharacterWidget extends StatelessWidget {
+
+  final Character character ;
+
+  CharacterWidget({this.character});
+
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
@@ -15,7 +20,7 @@ class CharacterWidget extends StatelessWidget {
       child: Stack(
         children: [
           _backgroundColorWidget(screenHeight, screenWidth),
-          _setMiniosnImage(screenHeight),
+          _chacracterImage(screenHeight),
           _characterName(),
         ],
       ),
@@ -33,7 +38,7 @@ class CharacterWidget extends StatelessWidget {
           width: 0.9 * width,
           decoration: BoxDecoration(
               gradient: LinearGradient(
-            colors: characters[0].color,
+            colors: character.color,
             begin: Alignment.topRight,
             end: Alignment.bottomCenter,
           )),
@@ -43,7 +48,7 @@ class CharacterWidget extends StatelessWidget {
   }
 
   //Set miniosn image
-  Widget _setMiniosnImage(double height) {
+  Widget _chacracterImage(double height) {
     return Align(
         alignment: Alignment(0, -0.55),
         //Hero not working
@@ -53,7 +58,7 @@ class CharacterWidget extends StatelessWidget {
             color: Colors.transparent,
             child: Container(
               child: Image.asset(
-                characters[0].imagePath,
+                character.imagePath,
                 height: height * 0.55,
               ),
             ),
@@ -78,7 +83,7 @@ class CharacterWidget extends StatelessWidget {
               color: Colors.transparent,
               child: Container(
                 child: Text(
-                  characters[0].name,
+                  character.name,
                   style: UtlitesTextStyle.heading,
                 ),
               ),
@@ -108,7 +113,7 @@ class CharacterWidget extends StatelessWidget {
         PageRouteBuilder(
             transitionDuration: Duration(microseconds: 30),
             pageBuilder: (context, _, __) => CharactersDetails(
-                  charater: characters[0],
+                  charater: character,
                 )));
   }
 }
