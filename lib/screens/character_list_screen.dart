@@ -5,6 +5,12 @@ import '../model/characters_model.dart';
 
 class CharacterListScreen extends StatefulWidget {
   _CharacterListScreenState createState() => _CharacterListScreenState();
+
+  final Character character ;
+
+  CharacterListScreen(this.character);
+
+
 }
 
 class _CharacterListScreenState extends State<CharacterListScreen> {
