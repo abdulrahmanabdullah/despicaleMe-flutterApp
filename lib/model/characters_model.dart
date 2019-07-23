@@ -30,4 +30,20 @@ List characters = [
           " At first, Agnes is only one out of the three sisters to be excited to be adopted by Gru. She happily hugs his leg and plays games with him, while her sisters are gawking at Gru, their dream of the 'perfect parents' in tatters. She is unaware of Gru's own dislike of the whole adoption, her innocence prevailing. She is a very naive, sweet, and innocent child, "
           "which is why Margo is so protective of her. She thinks Gru's dog is cute and chases after him, despite some protest from Margo.",
       color: [Colors.pink.shade200, Colors.redAccent.shade400]),
+  Character(
+      name: "Gru",
+      imagePath: "asset/images/gru-2.png",
+      description:
+      "Agnes, like her sisters, wished to be adopted by someone who cared about her."
+          " At first, Agnes is only one out of the three sisters to be excited to be adopted by Gru. She happily hugs his leg and plays games with him, while her sisters are gawking at Gru, their dream of the 'perfect parents' in tatters. She is unaware of Gru's own dislike of the whole adoption, her innocence prevailing. She is a very naive, sweet, and innocent child, "
+          "which is why Margo is so protective of her. She thinks Gru's dog is cute and chases after him, despite some protest from Margo.",
+      color: [Colors.pink.shade200, Colors.redAccent.shade400]),
+  Character(
+      name: "Lucky",
+      imagePath: "asset/images/w-gru.png",
+      description:
+      "Agnes, like her sisters, wished to be adopted by someone who cared about her."
+          " At first, Agnes is only one out of the three sisters to be excited to be adopted by Gru. She happily hugs his leg and plays games with him, while her sisters are gawking at Gru, their dream of the 'perfect parents' in tatters. She is unaware of Gru's own dislike of the whole adoption, her innocence prevailing. She is a very naive, sweet, and innocent child, "
+          "which is why Margo is so protective of her. She thinks Gru's dog is cute and chases after him, despite some protest from Margo.",
+      color: [Colors.blueGrey.shade200, Colors.deepPurple.shade200]),
 ];

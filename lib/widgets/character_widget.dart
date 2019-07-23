@@ -26,14 +26,14 @@ class CharacterWidget extends StatelessWidget {
             value = pageController.page - currentPage;
             value = (1 - (value.abs() * 0.6)).clamp(0.0, 1.0);
           }
-          return _stackPage(context,value);
+          return _stackPage(context, value);
         },
       ),
     );
   }
 
   // stack contain all widget in this layout
-  Widget _stackPage(context,double value) {
+  Widget _stackPage(context, double value) {
     //Get media query of height
     double height = screenHeightValue(context);
     //Get media query of width
@@ -41,7 +41,7 @@ class CharacterWidget extends StatelessWidget {
     return Stack(
       children: [
         _backgroundColorWidget(height, width),
-        _chacracterImage(height,value),
+        _chacracterImage(height, value),
         _characterName(),
       ],
     );
@@ -68,19 +68,13 @@ class CharacterWidget extends StatelessWidget {
   }
 
   //Set miniosn image
-  Widget _chacracterImage(double height,double value) {
+  Widget _chacracterImage(double height, double value) {
     return Align(
         alignment: Alignment(0, -0.55),
         //Hero not working
-        child: Hero(
-          tag: "Image1",
-          child: Material(
-            color: Colors.transparent,
-            child: Image.asset(
-              character.imagePath,
-              height: height * 0.55 * value,
-            ),
-          ),
+        child: Image.asset(
+          character.imagePath,
+          height: height * 0.55 * value,
         ));
   }
 
@@ -95,29 +89,13 @@ class CharacterWidget extends StatelessWidget {
         // vertical
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
-          Hero(
-            tag: "name1",
-            child: Material(
-              color: Colors.transparent,
-              child: Container(
-                child: Text(
-                  character.name,
-                  style: UtlitesTextStyle.heading,
-                ),
-              ),
-            ),
+          Text(
+            character.name,
+            style: UtlitesTextStyle.heading,
           ),
-          Hero(
-            tag: "des1",
-            child: Material(
-              color: Colors.transparent,
-              child: Container(
-                child: Text(
-                  "Tap to read more",
-                  style: UtlitesTextStyle.subHeading,
-                ),
-              ),
-            ),
+          Text(
+            "Tap to read more",
+            style: UtlitesTextStyle.subHeading,
           ),
         ],
       ),

@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import './screens/character_list_screen.dart';
-import './model/characters_model.dart';
-import './screens/characters_details.dart';
 
 main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  Character character;
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,10 +17,10 @@ class MyApp extends StatelessWidget {
         ),
         canvasColor: Colors.white,
       ),
-      title: "Practice",
+      title: "DespicaleMe App",
 //      home:CharacterListScreen(),
       routes: {
-        "/": (context) => CharacterListScreen(character),
+        "/": (context) => CharacterListScreen(),
       },
     );
   }
