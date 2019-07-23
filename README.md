@@ -6,7 +6,7 @@
 - AnimatedPosition 
 - Event for change background color 
 
-![](screenshot/pic_1.png | width=250) 
+<img src="screenshot/pic_1.png"  width="250" >
 ![](screenshot/pic_2.pn | width=250g) 
 ![](screenshot/pic_3.png | width=250) 
 ![](screenshot/pic_4.png | width=250) 
