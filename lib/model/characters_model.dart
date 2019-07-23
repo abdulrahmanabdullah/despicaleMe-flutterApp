@@ -31,7 +31,7 @@ List characters = [
           "which is why Margo is so protective of her. She thinks Gru's dog is cute and chases after him, despite some protest from Margo.",
       color: [Colors.pink.shade200, Colors.redAccent.shade400]),
   Character(
-      name: "Gru",
+      name: "Felonius Gru",
       imagePath: "asset/images/gru-2.png",
       description:
       "Agnes, like her sisters, wished to be adopted by someone who cared about her."
@@ -39,7 +39,7 @@ List characters = [
           "which is why Margo is so protective of her. She thinks Gru's dog is cute and chases after him, despite some protest from Margo.",
       color: [Colors.pink.shade200, Colors.redAccent.shade400]),
   Character(
-      name: "Lucky",
+      name: "Margo Gru",
       imagePath: "asset/images/w-gru.png",
       description:
       "Agnes, like her sisters, wished to be adopted by someone who cared about her."

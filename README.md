@@ -1,16 +1,18 @@
-# despicale_me_app
+# Despicale Me Characters app 
 
-A new Flutter project.
+- This is app contain pageController (ViewPager in Android)
+- And Routers between pages.
+- Hero Animation.
+- AnimatedPosition 
+- Event for change background color 
 
-## Getting Started
+![](screenshot/pic_1.png) 
+![](screenshot/pic_2.png) 
+![](screenshot/pic_3.png) 
+![](screenshot/pic_4.png) 
+![](screenshot/pic_5.png) 
+![](screenshot/pic_6.png) 
+![](screenshot/pic_7.png) 
+![](screenshot/pic_8.png) 
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
