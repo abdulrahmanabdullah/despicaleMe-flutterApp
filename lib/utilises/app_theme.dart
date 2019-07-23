@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-class UtlitesTextStyle {
+class UtilisesTextStyle {
 
   static const TextStyle display1 = TextStyle(
       fontFamily: 'WorkSans',

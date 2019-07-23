@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../model/characters_model.dart';
-import '../utlities/app_theme.dart';
+import '../utilises/app_theme.dart';
 import '../screens/characters_details.dart';
 
 class CharacterWidget extends StatelessWidget {
@@ -91,11 +91,11 @@ class CharacterWidget extends StatelessWidget {
         children: <Widget>[
           Text(
             character.name,
-            style: UtlitesTextStyle.heading,
+            style: UtilisesTextStyle.heading,
           ),
           Text(
             "Tap to read more",
-            style: UtlitesTextStyle.subHeading,
+            style: UtilisesTextStyle.subHeading,
           ),
         ],
       ),

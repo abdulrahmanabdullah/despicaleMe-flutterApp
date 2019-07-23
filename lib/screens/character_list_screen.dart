@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../utlities/app_theme.dart';
+import '../utilises/app_theme.dart';
 import '../widgets/character_widget.dart';
 import '../model/characters_model.dart';
 
@@ -45,10 +45,10 @@ class _CharacterListScreenState extends State<CharacterListScreen> {
                     children: [
                       TextSpan(
                           text: "Despicale Me",
-                          style: UtlitesTextStyle.display1),
+                          style: UtilisesTextStyle.display1),
                       TextSpan(text: "\n"),
                       TextSpan(
-                          text: "Characters", style: UtlitesTextStyle.display2)
+                          text: "Characters", style: UtilisesTextStyle.display2)
                     ],
                   ),
                 ),

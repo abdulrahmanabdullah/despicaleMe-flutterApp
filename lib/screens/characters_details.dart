@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:after_layout/after_layout.dart';
 import '../model/characters_model.dart';
-import '../utlities/app_theme.dart';
+import '../utilises/app_theme.dart';
 
 class CharactersDetails extends StatefulWidget {
   final Character charater;
@@ -76,7 +76,7 @@ class _CharactersDetailsState extends State<CharactersDetails>
                     height: 80,
                     child: Text(
                       "Clips",
-                      style: UtlitesTextStyle.subHeading
+                      style: UtilisesTextStyle.subHeading
                           .copyWith(color: Colors.black),
                     ),
                   ),
@@ -159,7 +159,7 @@ class _CharactersDetailsState extends State<CharactersDetails>
           child: Container(
             child: Text(
               widget.charater.name,
-              style: UtlitesTextStyle.heading,
+              style: UtilisesTextStyle.heading,
             ),
           ),
         ),
@@ -178,7 +178,7 @@ class _CharactersDetailsState extends State<CharactersDetails>
           child: Container(
             child: Text(
               widget.charater.description,
-              style: UtlitesTextStyle.subHeading,
+              style: UtilisesTextStyle.subHeading,
             ),
           ),
         ),
