@@ -6,9 +6,9 @@
 - AnimatedPosition 
 - Event for change background color 
 
-![](screenshot/pic_1.png) 
-![](screenshot/pic_2.png) 
-![](screenshot/pic_3.png) 
+![test](screenshot/pic_1.png) 
+![test](screenshot/pic_2.png) 
+![test](screenshot/pic_3.png) 
 ![](screenshot/pic_4.png) 
 ![](screenshot/pic_5.png) 
 ![](screenshot/pic_6.png) 
