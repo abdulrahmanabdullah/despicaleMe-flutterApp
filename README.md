@@ -6,13 +6,13 @@
 - AnimatedPosition 
 - Event for change background color 
 
-![test](screenshot/pic_1.png) 
-![test](screenshot/pic_2.png) 
-![test](screenshot/pic_3.png) 
-![](screenshot/pic_4.png) 
-![](screenshot/pic_5.png) 
-![](screenshot/pic_6.png) 
-![](screenshot/pic_7.png) 
-![](screenshot/pic_8.png) 
+![](screenshot/pic_1.png | width=250) 
+![](screenshot/pic_2.pn | width=250g) 
+![](screenshot/pic_3.png | width=250) 
+![](screenshot/pic_4.png | width=250) 
+![](screenshot/pic_5.png | width=250) 
+![](screenshot/pic_6.png | width=250) 
+![](screenshot/pic_7.png | width=250) 
+![](screenshot/pic_8.png | width=250) 
 
 
